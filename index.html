@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NgNet Digital Solutions | Consultoría Tecnológica</title>
+    
+    <!-- FAVICON: Logo corporativo NgNet -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232D2F31%22/><path d=%22M30 70V30h12l18 25V30h10v40H58L42 45v25H30z%22 fill=%22%23A435F0%22/></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            color: #2D2F31;
+        }
+
+        .bg-tech-dark { background-color: #1c1d1f; }
+        .text-accent { color: #A435F0; }
+        .bg-accent { background-color: #A435F0; }
+        .border-accent { border-color: #A435F0; }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #d1d7dc;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(164, 53, 240, 0.05), transparent),
+                        radial-gradient(circle at bottom left, rgba(63, 131, 248, 0.05), transparent);
+        }
+
+        .btn-udemy {
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #2d2f31;
+        }
+        .btn-udemy:hover {
+            background-color: rgba(0,0,0,0.04);
+        }
+
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #d1d7dc;
+        }
+        .service-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+            border-color: #A435F0;
+        }
+
+        .tech-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #A435F0;
+            filter: blur(120px);
+            opacity: 0.1;
+            z-index: 0;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navegación Estilo Udemy -->
+    <nav class="fixed w-full z-50 glass-nav h-16 md:h-20 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 w-full flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <div class="w-8 h-8 bg-tech-dark rounded flex items-center justify-center">
+                        <span class="text-white font-black text-xs">Ng</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tighter text-[#2d2f31]">NgNet <span class="text-accent font-light">Digital</span></span>
+                </div>
+                <div class="hidden lg:flex space-x-6 text-sm font-medium text-[#6a6f73]">
+                    <a href="#servicios" class="hover:text-accent transition">Servicios</a>
+                    <a href="#proyectos" class="hover:text-accent transition">Proyectos</a>
+                    <a href="#tecnologias" class="hover:text-accent transition">Stack</a>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <a href="#contacto" class="hidden md:block px-5 py-2 text-sm font-bold btn-udemy">Contáctanos</a>
+                <a href="#contacto" class="bg-tech-dark text-white px-5 py-2 text-sm font-bold hover:bg-[#3e4143] transition">Empezar Proyecto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Propuesta 1 + Glow de Propuesta 2 -->
+    <section class="relative pt-40 pb-24 px-6 hero-gradient overflow-hidden">
+        <div class="tech-glow top-20 -right-20"></div>
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
+            <div class="flex-1 text-center lg:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
+                    Transformamos ideas en <span class="text-accent">soluciones digitales</span> de alto impacto.
+                </h1>
+                <p class="text-lg text-[#6a6f73] mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Desarrollo web moderno, consultoría informática y optimización tecnológica para empresas que buscan liderar la era digital.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <button class="bg-tech-dark text-white px-8 py-4 font-bold text-lg hover:bg-[#3e4143] transition shadow-lg">Ver Servicios</button>
+                    <button class="px-8 py-4 font-bold text-lg btn-udemy">Casos de Éxito</button>
+                </div>
+                <div class="mt-12 flex items-center justify-center lg:justify-start gap-8 opacity-50 grayscale">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" class="h-6" alt="React">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" class="h-5" alt="Tailwind">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" class="h-6" alt="MongoDB">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Vercel_logo_black.svg" class="h-5" alt="Vercel">
+                </div>
+            </div>
+            <div class="flex-1 w-full max-w-xl">
+                <div class="bg-tech-dark p-1 rounded-2xl shadow-2xl relative">
+                    <div class="bg-[#2D2F31] rounded-xl overflow-hidden border border-slate-700">
+                        <!-- Mockup de Código/Dashboard -->
+                        <div class="flex items-center gap-2 px-4 py-3 bg-[#1c1d1f] border-b border-slate-700">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span class="text-xs text-slate-500 ml-4 font-mono">ngnet-project.ts</span>
+                        </div>
+                        <div class="p-6 font-mono text-sm leading-relaxed">
+                            <p class="text-purple-400">const <span class="text-blue-400">ngNetSolutions</span> = {</p>
+                            <p class="pl-4 text-slate-300">mission: <span class="text-green-400">"Innovación constante"</span>,</p>
+                            <p class="pl-4 text-slate-300">services: [<span class="text-yellow-400">"Web"</span>, <span class="text-yellow-400">"AI"</span>, <span class="text-yellow-400">"Cloud"</span>],</p>
+                            <p class="pl-4 text-slate-300">ready: <span class="text-blue-400">true</span></p>
+                            <p class="text-purple-400">};</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section: Propuesta 1 (Limpio y Grid) -->
+    <section id="servicios" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                <div class="max-w-xl">
+                    <h2 class="text-3xl font-bold mb-4 tracking-tight">Nuestras áreas de especialidad</h2>
+                    <p class="text-[#6a6f73]">Ofrecemos un enfoque integral para asegurar que tu presencia digital sea competitiva, segura y escalable.</p>
+                </div>
+                <a href="#" class="text-accent font-bold border-b-2 border-accent pb-1 hover:text-purple-800 transition">Explorar catálogo completo</a>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="service-card p-10 bg-white group cursor-pointer">
+                    <div class="w-14 h-14 bg-slate-50 rounded-lg flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i data-lucide="code-2" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Desarrollo Web Full-Stack</h3>
+                    <p class="text-[#6a6f73] text-sm leading-relaxed mb-6">Aplicaciones web modernas, rápidas y optimizadas para SEO utilizando tecnologías líderes como React, Next.js y Node.js.</p>
+                    <div class="flex items-center gap-2 text-accent font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+                        Saber más <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-card p-10 bg-white group cursor-pointer">
+                    <div class="w-14 h-14 bg-slate-50 rounded-lg flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Ciberseguridad & Auditoría</h3>
+                    <p class="text-[#6a6f73] text-sm leading-relaxed mb-6">Protegemos tus activos digitales mediante auditorías preventivas y protocolos de seguridad robustos.</p>
+                    <div class="flex items-center gap-2 text-accent font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+                        Saber más <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="service-card p-10 bg-white group cursor-pointer">
+                    <div class="w-14 h-14 bg-slate-50 rounded-lg flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i data-lucide="cloud-lightning" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Soluciones Cloud</h3>
+                    <p class="text-[#6a6f73] text-sm leading-relaxed mb-6">Migración y gestión de infraestructura en la nube para garantizar disponibilidad del 99.9% de tus servicios.</p>
+                    <div class="flex items-center gap-2 text-accent font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+                        Saber más <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner CTA: Estilo Propuesta 2 (Dark & Punchy) -->
+    <section class="py-20 px-6 bg-tech-dark relative overflow-hidden">
+        <div class="tech-glow -left-20 bottom-0 opacity-20"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">¿Listo para el siguiente nivel tecnológico?</h2>
+            <p class="text-slate-400 text-lg mb-10">Agenda una consultoría gratuita de 30 minutos con nuestros especialistas.</p>
+            <button class="bg-accent text-white px-10 py-4 font-bold text-lg hover:bg-purple-700 transition shadow-2xl rounded-sm">
+                Agendar Consultoría
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer: Evolucionado de la versión previa -->
+    <footer class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-tech-dark rounded flex items-center justify-center">
+                        <span class="text-white font-black text-xs">Ng</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tighter">NgNet <span class="text-accent font-light">Digital</span></span>
+                </div>
+                <p class="text-sm text-slate-500 max-w-xs text-center md:text-left leading-relaxed">
+                    Socio estratégico en tecnología y desarrollo de software para el mercado global.
+                </p>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-slate-400 text-[10px] mb-2 uppercase tracking-[0.2em] font-extrabold">© 2026 Desarrollado y diseñado por</p>
+                <div class="flex flex-col items-center">
+                    <p class="text-slate-900 font-extrabold text-base tracking-tight">NgNet© <span class="text-accent font-medium">Digital Solutions</span></p>
+                    <span class="h-1 w-12 bg-accent mt-2 rounded-full"></span>
+                </div>
+            </div>
+
+            <div class="flex gap-6">
+                <a href="#" class="text-slate-400 hover:text-accent transition"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                <a href="#" class="text-slate-400 hover:text-accent transition"><i data-lucide="github" class="w-6 h-6"></i></a>
+                <a href="#" class="text-slate-400 hover:text-accent transition"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
